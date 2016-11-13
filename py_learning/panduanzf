@@ -1,0 +1,8 @@
+
+a=float(input('请输入一个数'))
+if a>0:
+    print('a是一个正数')
+elif a==0:
+    print('a=0')
+else:
+    print('a是一个负数')

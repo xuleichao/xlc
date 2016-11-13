@@ -1,0 +1,14 @@
+def is_num(num):
+    try:
+        float(num)
+        return true
+    except ValueError:
+        pass
+    try:
+        import unicodedata
+        unicodedata.numeric(num)
+        return True
+    except(TypeError,ValueError):
+        pass
+    return False
+print(is_num('foo'))

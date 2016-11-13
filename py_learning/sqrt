@@ -1,0 +1,3 @@
+num=float(input('give the number to be sqrted'))
+sqrt=num ** 0.5
+print('{0} aqrt is:{1}'.format(num,sqrt))

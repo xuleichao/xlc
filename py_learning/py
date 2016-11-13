@@ -1,0 +1,4 @@
+def printme(str):
+    "this prints a passed sring into this function"
+    print(str)
+    return
