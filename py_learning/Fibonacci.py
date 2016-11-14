@@ -10,10 +10,10 @@ elif a==1:
     print('The {0} Fibonacci sequece is {1}'.format(a,Fibonacci_1))
 else:
     print('Fibonacci is ')
-    print(Fibonacci_1,Fibonacci_2)
+    print Fibonacci_1,Fibonacci_2,
     while count<=a:
         Fibonacci_n=Fibonacci_1+Fibonacci_2
-        print(Fibonacci_n)
+        print Fibonacci_n,
 
         #update the var
         Fibonacci_1=Fibonacci_2
