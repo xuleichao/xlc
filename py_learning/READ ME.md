@@ -7,5 +7,5 @@
 
 
   [1]: http://www.runoob.com/python3/python3-examples.html
-  [2]: http://blog.leanote.com/cate/qq-alan/python%E6%95%99%E7%A8%
+  [2]: http://blog.leanote.com/cate/qq-alan/python
   - 没有太多的废话，对于基础入门学习很好
