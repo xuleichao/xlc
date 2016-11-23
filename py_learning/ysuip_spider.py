@@ -24,6 +24,8 @@ for i in range(1,length_ti+1):
         if (j-1-i+1)%6==0:          #将表头循环加入到IP列表中
             result[j-1]=title_result[i-1]+':'+ip_result[j-1]
 
+fo=open('ip.txt','wb')
 for i in result:
-    print i
+    fo.write(i+'\n')
+fo.close()
 
