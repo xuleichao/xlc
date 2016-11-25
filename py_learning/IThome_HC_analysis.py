@@ -16,10 +16,10 @@ def getHC(page):        #'HC=hot comments'
     reg_device=re.compile('href=\"http://m\.ithome\.com/ithome/download/\">(.*?)<',re.S)
 
     location=re.findall(reg_location,html)
-    name=re.findall(reg_name,html)
-    head_url=re.findall(reg_head_url,html)
-    suport=re.findall(reg_suport,html)
-    device=re.findall(reg_device,html)
+    #name=re.findall(reg_name,html)
+    #head_url=re.findall(reg_head_url,html)
+    #suport=re.findall(reg_suport,html)
+    #device=re.findall(reg_device,html)
     '''for a in location:
         print a
     for b in name:
@@ -33,13 +33,16 @@ def getHC(page):        #'HC=hot comments'
     return(location)
     
 if __name__=='__main__':
-    for i in range(198264,200000):
+    for i in range(220229+1,275122):
         location=getHC(i)
+        print i
 
         fo=open('location.txt','a')
         for i in location:
             fo.write(i+'\n')
         fo.close()
+    a=random.randint(0.5,5)
+    time.sleep(a)  
 
    
 
