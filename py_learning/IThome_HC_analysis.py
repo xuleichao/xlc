@@ -15,9 +15,9 @@ def getHC(page):        #'HC=hot comments'
     reg_suport=re.compile('id=\"hotagree.*?\" href=\"javascript:hotCommentVote.*?\">(.*?)<',re.S)
     reg_device=re.compile('href=\"http://m\.ithome\.com/ithome/download/\">(.*?)<',re.S)
 
-    location=re.findall(reg_location,html)
+    #location=re.findall(reg_location,html)
     #name=re.findall(reg_name,html)
-    #head_url=re.findall(reg_head_url,html)
+    head_url=re.findall(reg_head_url,html)
     #suport=re.findall(reg_suport,html)
     #device=re.findall(reg_device,html)
     '''for a in location:
@@ -30,16 +30,21 @@ def getHC(page):        #'HC=hot comments'
         print d
     for e in device:
         print e'''
-    return(location)
+    return(head_url)
     
 if __name__=='__main__':
-    for i in range(220229+1,275122):
+    x=0
+    for i in range(200229+1,275122):
         location=getHC(i)
         print i
-
-        fo=open('location.txt','a')
-        for i in location:
-            fo.write(i+'\n')
+        
+        fo=open('image.txt','a')
+        for j in location:
+            #fo.write(j)
+            
+            urllib.urlretrieve(j,'%s.jpg' % (i+x))
+            print j
+            x+=1
         fo.close()
     a=random.randint(0.5,5)
     time.sleep(a)  
