@@ -1,0 +1,9 @@
+tic;
+load data
+load textdata
+index={};
+index_sum=cell(1000,11);
+pro=[1,1,1,1,1];
+data=data;
+textdata=textdata;
+main(data,textdata,index,pro,index_sum)

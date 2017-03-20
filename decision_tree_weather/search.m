@@ -1,0 +1,22 @@
+load tree_table
+index_sum=index_sum;
+inf=cell(2,8);
+%month=input('请输入月份:');
+%inf{2,2}=num2str(month);
+inf{2,2}='2';
+%high=input('最高气温是多少:');
+%inf{2,3}=num2str(high);
+inf{2,3}='15';
+%low=input('最低气温是多少:');
+%inf{2,4}=num2str(low);
+inf{2,4}='2';
+%fengli=input('风力怎么样:','s');
+%inf{2,7}=fengli;
+inf{2,7}='1级';
+%fengxiang=input('风向如何:','s');
+%inf{2,6}=fengxiang;
+inf{2,6}='西北风';
+fengli=inf(2,7);
+inf
+len=size(index_sum);
+len=len(1)

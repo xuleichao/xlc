@@ -1,0 +1,104 @@
+load tree_table
+index_sum=index_sum;
+inf=cell(2,8);
+%month=input('请输入月份:');
+%inf{2,2}=num2str(month);
+inf{2,2}='2';
+%high=input('最高气温是多少:');
+%inf{2,3}=num2str(high);
+inf{2,3}='15';
+%low=input('最低气温是多少:');
+%inf{2,4}=num2str(low);
+inf{2,4}='2';
+%fengli=input('风力怎么样:','s');
+%inf{2,7}=fengli;
+inf{2,7}='1级';
+%fengxiang=input('风向如何:','s');
+%inf{2,6}=fengxiang;
+inf{2,6}='西北风';
+fengli=inf(2,7);
+inf
+len=size(index_sum);
+len=len(1)
+i=1;
+while
+while (~strcmp(index_sum{i,2},[]))
+    if (~strcmp((index_sum{i,2}),fengli))
+        index_sum(i,:)=[];
+        i=0;
+    end  
+    len=size(index_sum);
+    len=len(1);
+    i=i+1;
+    if(i>len)
+        break
+    end
+end
+if (strcmp(index_sum{1,3},'0'))
+        today='没有霾'
+elseif(strcmp(index_sum{1,3},'1'))
+        today='霾'
+else
+end
+month=inf(2,2)
+i=1;
+while (~strcmp(index_sum{i,1},[]))
+    if (~strcmp((index_sum{i,4}),month))
+        index_sum(i,:)=[];
+        i=0;
+    end  
+    len=size(index_sum);
+    len=len(1);
+    i=i+1;
+    if(i>len)
+        break
+    end
+end
+if (strcmp(index_sum{1,5},'0'))
+        today='没有霾'
+elseif(strcmp(index_sum{1,5},'1'))
+        today='霾'
+else
+end
+high=inf(2,3)
+len=size(index_sum);
+len=len(1);
+for i=1:len
+    if (~strcmp((index_sum{i,6}),num2str(high)))
+        index_sum(i,:)=[];
+    end
+end
+if (strcmp(index_sum{1,7},'0'))
+        today='没有霾'
+elseif(strcmp(index_sum{1,7},'1'))
+        today='霾'
+else
+end
+fengxiang=inf(2,6)
+len=size(index_sum);
+len=len(1);
+for i=1:len
+    if (~strcmp((index_sum{i,8}),fengxiang))
+        index_sum(i,:)=[];
+    end
+end
+if (strcmp(index_sum{1,9},'0'))
+        today='没有霾'
+elseif(strcmp(index_sum{1,9},'1'))
+        today='霾'
+else
+end
+low=inf(2,4)
+len=size(index_sum);
+len=len(1);
+for i=1:len
+    if (~strcmp((index_sum{i,10}),num2str(month)))
+        index_sum(i,:)=[];
+    end
+end
+if (strcmp(index_sum{1,11},'0'))
+        today='没有霾'
+elseif(strcmp(index_sum{1,11},'1'))
+        today='霾'
+else
+end
